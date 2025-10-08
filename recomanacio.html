@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>I &lt;3 U tube — Recomanació</title>
+  <meta name="description" content="Una recomanació aleatòria de YouTube cada cop que recarregues la pàgina." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    :root { font-family: 'Arial Narrow', Arial, sans-serif; }
+    body { margin: 0; background: #ffffff; color: #ff4da6; }
+    .wrap { min-height: 100dvh; display: grid; place-items: center; padding: 2rem 1rem; }
+    .card { width: min(92vw, 820px); background: #ffffff; border-radius: 1.25rem; box-shadow: 0 8px 24px rgba(0,0,0,.08); overflow: hidden; }
+    header { padding: 1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    header h1 { margin: 0; font-size: clamp(1.2rem, 3.5vw, 1.8rem); }
+    header a { color: #ff4da6; text-decoration: none; }
+    .thumb { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #f4f6fa; }
+    .content { padding: 1.25rem; }
+    .title { font-size: clamp(1.1rem, 3.5vw, 1.6rem); font-weight: 700; margin: 0 0 .5rem; }
+    .channel { opacity: .8; margin: 0 0 1rem; }
+    .row { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: .8rem 1rem; border-radius: .85rem; text-decoration: none; font-weight: 700; background: #ff4da6; color: #fff; border: 0; cursor: pointer; }
+    .btn.secondary { background: #ffe1ef; color: #ff4da6; }
+    .link { word-break: break-all; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: #f6f6f8; padding: .6rem .75rem; border-radius: .5rem; display: inline-block; color: #ff4da6; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="card">
+      <header>
+        <h1>I &lt;3 U tube</h1>
+        <a href="index.html">Inici</a>
+      </header>
+
+      <a id="videoLink" class="link" href="#" target="_blank" rel="noopener">...</a>
+      <img id="thumb" class="thumb" alt="Miniatura del vídeo">
+
+      <div class="content">
+        <h2 id="title" class="title">Carregant...</h2>
+        <p id="channel" class="channel"></p>
+
+        <div class="row">
+          <button id="again" class="btn">Un altre!</button>
+          <a class="btn secondary" id="open" href="#" target="_blank" rel="noopener">Obre a YouTube</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
